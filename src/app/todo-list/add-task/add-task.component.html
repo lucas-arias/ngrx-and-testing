@@ -1,0 +1,3 @@
+<input placeholder="Add a description" [(ngModel)]="taskDescription" />
+
+<button [disabled]="!taskDescription" (click)="emitTask()">Add</button>

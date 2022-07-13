@@ -1,0 +1,10 @@
+<h1>To do list</h1>
+
+<ng-container *ngIf="todoList$ | async as todoList">
+  <app-list-presentation
+    *ngIf="todoList.length"
+    [todoList]="todoList"
+  ></app-list-presentation>
+</ng-container>
+
+<app-add-task (newTaskAdded)="addTaskToList($event)"></app-add-task>
